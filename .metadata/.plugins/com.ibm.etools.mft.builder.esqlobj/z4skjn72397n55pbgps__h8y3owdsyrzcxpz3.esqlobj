@@ -1,0 +1,10 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+	--	DECLARE inRef REFERENCE TO InputRoot.DFDL.CustomerDetails;
+	--	FOR inRef AS InputRoot.DFDL.CustomerDetails.Customer[] DO
+	--	END FOR
+		
+	SET OutputRoot.XMLNSC = InputRoot.DFDL;	
+	RETURN TRUE;
+	END;

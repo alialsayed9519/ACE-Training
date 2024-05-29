@@ -1,0 +1,15 @@
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.OrderDetails;
+		CREATE FIELD OutputRoot.XMLNSC.OrderStatus;
+		DECLARE outRef REFERENCE TO OutputRoot.XMLNSC.OrderStatus;
+		
+		IF inRef.Quantity > 0 THEN
+			SET outRef.Status = 'your order has been generated';
+		ELSE
+			SET outRef.Status = 'something is wrong';
+		END IF;
+		RETURN TRUE;
+	END;
+END MODULE;

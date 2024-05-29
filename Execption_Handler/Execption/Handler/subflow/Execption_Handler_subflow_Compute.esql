@@ -1,0 +1,10 @@
+BROKER SCHEMA Execption.Handler.subflow
+
+
+CREATE COMPUTE MODULE Execption_Handler_subflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+			SET OutputRoot.XMLNSC.Exception = InputExceptionList;
+		RETURN TRUE;
+	END;
+END MODULE;

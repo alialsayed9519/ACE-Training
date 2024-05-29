@@ -1,0 +1,23 @@
+BROKER SCHEMA SoapService.Transaction.msgflow
+DECLARE soapenv NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+DECLARE tran NAMESPACE 'http://tempuri.org/TransctionDetails';
+
+CREATE COMPUTE MODULE SoapService_Transaction_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+		DECLARE inRef REFERENCE TO InputRoot.SOAP.Body.tran:TransactionRequest;
+		INSERT INTO Database.transaction_details VALUES (inRef.tran:Transaction_number, inRef.tran:Transaction_date, inRef.tran:Store_number, inRef.tran:Quantity, inRef.tran:Total_amount, inRef.tran:Delivery_address);
+	
+		CREATE FIELD OutputRoot.SOAP.Body.tran:TransactionResponse;
+		DECLARE outRef REFERENCE TO OutputRoot.SOAP.Body.tran:TransactionResponse;
+	
+		SET OutputRoot.SOAP.Context.Namespace.(SOAP.NamespaceDecl)xmlns:soapenv = soapenv;
+		SET OutputRoot.SOAP.Context.Namespace.(SOAP.NamespaceDecl)xmlns:tran = tran;
+		SET outRef.tran:Transaction_number[] = inRef.tran:Transaction_number; --SELECT R.trans_no FROM Database.transaction_details AS R WHERE R.trans_no = inRef.tran:Transaction_number ;
+		SET outRef.tran:Transaction_status = 'transaction has placed successfuly';
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

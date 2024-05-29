@@ -1,0 +1,15 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.Sphere;
+		DECLARE radius INTEGER inRef.Radius;
+		DECLARE volume DECIMAL;
+		SET volume = volumeOfSphere(radius); 
+		SET OutputRoot.XMLNSC.Volume = volume;
+		RETURN TRUE;
+	END;
+	
+	CREATE FUNCTION volumeOfSphere(IN r INTEGER ) RETURNS DECIMAL
+	BEGIN
+		RETURN 1.33*3.14*r*r*r;
+	END;
+	

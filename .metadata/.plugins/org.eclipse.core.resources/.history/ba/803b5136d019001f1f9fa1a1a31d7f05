@@ -1,0 +1,13 @@
+BROKER SCHEMA Excption.Storage.msgflow
+
+
+CREATE DATABASE MODULE Excption_Storage_msgflow_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

@@ -1,0 +1,10 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+	
+		DECLARE inRef REFERENCE TO InputRoot.SOAP.Body.tran:TransactionRequest;
+		INSERT INTO Database.transaction_details VALUES (inRef.tran:Transaction_number, inRef.tran:Transaction_date, inRef.tran:Store_number, inRef.tran:Quantity, inRef.tran:Total_amount, inRef.tran:Delivery_address);
+	
+	
+		RETURN TRUE;
+	END;
+

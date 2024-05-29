@@ -1,0 +1,6 @@
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

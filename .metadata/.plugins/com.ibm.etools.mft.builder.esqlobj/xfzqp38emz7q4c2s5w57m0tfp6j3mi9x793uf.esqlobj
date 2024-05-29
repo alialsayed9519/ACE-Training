@@ -1,0 +1,15 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+	
+		DECLARE inRef REFERENCE TO InputRoot.SOAP.Body.tran:TransactionRequest;
+		INSERT INTO Database.transaction_details VALUES (inRef.tran:Transaction_number, inRef.tran:Transaction_date, inRef.tran:Store_number, inRef.tran:Quantity, inRef.tran:Total_amount, inRef.tran:Delivery_address);
+	
+		CREATE FIELD OutputRoot.SOAP.Body.tran:TransactionResponse;
+		DECLARE outRef REFERENCE TO OutputRoot.SOAP.Body.tran:TransactionResponse;
+	
+		SET outRef.tran:Transaction_number = SELECT R.trans_no FROM Database.transaction_details AS R WHERE trans_no = Transaction_number ;
+		SET outRef.tran:Transaction_status = 'transaction has placed successfuly';
+		
+		RETURN TRUE;
+	END;
+

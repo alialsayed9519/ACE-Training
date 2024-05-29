@@ -1,0 +1,5 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		set OutputExceptionList.E
+		RETURN TRUE;
+	END;

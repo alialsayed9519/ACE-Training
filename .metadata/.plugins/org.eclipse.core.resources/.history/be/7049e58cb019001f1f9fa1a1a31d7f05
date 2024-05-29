@@ -1,0 +1,19 @@
+BROKER SCHEMA IIBasConsumer.Trans.msgflow
+DECLARE soapenv NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+DECLARE tran NAMESPACE 'http://tempuri.org/TransctionDetails';
+
+CREATE COMPUTE MODULE IIBasConsumer_Trans_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.Transaction.Data;
+		CREATE FIELD OutputRoot.SOAP.Body.tran:TransactionResponse;
+		DECLARE outRef REFERENCE TO OutputRoot.SOAP.Body.tran:TransactionRequest;
+		SET outRef.tran:Transaction_number = inRef.Transaction_nu;
+		SET outRef.tran:Transaction_date = inRef.Date;
+		SET outRef.tran:Store_number = inRef.Store;
+		SET outRef.tran:Total_amount = inRef.Amount;
+		SET outRef.tran:Quantity = inRef.Qty;
+		SET outRef.tran:Delivery_address = inRef.Delivery_Address;
+		RETURN TRUE;
+	END;
+END MODULE;

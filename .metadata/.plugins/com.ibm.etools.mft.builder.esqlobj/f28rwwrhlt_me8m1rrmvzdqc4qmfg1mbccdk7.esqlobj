@@ -1,0 +1,6 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+	--	DECLARE inRef REFERENCE TO Root.XMLNSC.articaleDetails.Articale;
+		
+		RETURN TRUE;
+	END;

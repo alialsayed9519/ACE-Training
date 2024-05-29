@@ -1,0 +1,10 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+	
+		DECLARE inRef REFERENCE TO InputRoot.SOAP.Body.TransactionRequest
+		INSERT INTO Database.transaction_details VALUES (
+	
+	
+		RETURN TRUE;
+	END;
+

@@ -1,0 +1,48 @@
+Summary of selections: WSDL files generation
+
+The selected message set:
+/TransctionDetails/TransctionDetails
+
+The generated WSDL files will go into:
+/TransctionDetails
+
+The version of WSDL to be generated: 1.1
+The version of SOAP to be generated: 1.1
+
+The selected style for WSDL generation: document
+The WSDL Namespace: http://tempuri.org/TransctionDetails
+
+The following operations will be created:
+Transaction (Request-Response)
+
+The following bindings are selected:
+SOAP over http.
+
+The following WSDL files will be generated:
+/TransctionDetails/TransctionDetailsService.wsdl
+
+
+Creating new WSDL Service file '\TransctionDetails\TransctionDetailsService.wsdl'
+Setting wsdl definition name for 'TransctionDetailsService.wsdl': TransctionDetails
+Setting wsdl definition targetNamespace for 'TransctionDetailsService.wsdl': http://tempuri.org/TransctionDetails
+Adding namespace: xmlns for 'TransctionDetailsService.wsdl':soap=http://schemas.xmlsoap.org/wsdl/soap/
+Adding namespace: xmlns for 'TransctionDetailsService.wsdl':xsd=http://www.w3.org/2001/XMLSchema
+Adding namespace: xmlns for 'TransctionDetailsService.wsdl':wsdl=http://schemas.xmlsoap.org/wsdl/
+Creating new WSDL Interface file '\TransctionDetails\TransctionDetailsService.wsdl'
+Creating portType for WSDL Interface: TransctionDetailsPortType
+Creating portType operation 'Transaction'
+Creating message 'Transaction_in'
+Creating message 'Transaction_out'
+Creating message 'Transaction_fault1'
+Creating SOAP over HTTP binding 'TransctionDetailsSOAP_HTTP_Binding'
+Creating binding operation 'Transaction' for binding 'TransctionDetailsSOAP_HTTP_Binding'
+Creating SOAP over HTTP service 'TransctionDetailsSOAP_Service'
+Creating port 'TransctionDetailsSOAP_Port' for service 'TransctionDetailsSOAP_Service'
+
+Elapsed time processing this WSDL definition: 1.716467252648E9 seconds
+Number of warnings for this WSDL definition: 0
+
+
+Number of files processed: 1
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="CustomerApp">
+  <XSDCollection href="platform:/resource/CustomerApp/IBMdefined/CommaSeparatedFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+  <XSDCollection href="platform:/resource/CustomerApp/Customer_DFDLModeling.xsd" prefix="" targetNamespace="">
+    <import name="IBMdefined/CommaSeparatedFormat.xsd" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+    <element href="platform:/resource/CustomerApp/Customer_DFDLModeling.xsd#//Customer_Details;XSDElementDeclaration" name="Customer_Details"/>
+  </XSDCollection>
+</MessageBroker>

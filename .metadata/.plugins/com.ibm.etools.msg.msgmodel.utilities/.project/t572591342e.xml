@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MRMessageSet id="K2Q20NS002001" name="TransctionDetails" parser="SOAP">
+  <MRMsgCollection href="platform:/resource/TransctionDetails/TransctionDetails/soap.mxsd" prefix="" targetNamespace="">
+    <message href="platform:/resource/TransctionDetails/TransctionDetails/soap.mxsd#/0/SOAP_Domain_Msg;XSDElementDeclaration$MRMessage" name="SOAP_Domain_Msg"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/soap.mxsd#/0/SOAP_Domain_Msg;XSDElementDeclaration" name="SOAP_Domain_Msg" type="mset://TransctionDetails#/-/complexType{}SOAP_Msg_type"/>
+    <complexType baseType="mset://TransctionDetails#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/TransctionDetails/TransctionDetails/soap.mxsd#/0/MIME_Headers_type;XSDComplexTypeDefinition" name="MIME_Headers_type"/>
+    <complexType baseType="mset://TransctionDetails#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/TransctionDetails/TransctionDetails/soap.mxsd#/0/Attachment_type;XSDComplexTypeDefinition=1" name="Attachment_type"/>
+    <complexType baseType="mset://TransctionDetails#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/TransctionDetails/TransctionDetails/soap.mxsd#/0/SOAP_Msg_type;XSDComplexTypeDefinition=2" name="SOAP_Msg_type"/>
+    <group href="platform:/resource/TransctionDetails/TransctionDetails/soap.mxsd#/0/MIME_header_fields;XSDModelGroupDefinition" name="MIME_header_fields"/>
+  </MRMsgCollection>
+  <MRMsgCollection href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd" prefix="" targetNamespace="">
+    <message href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/TransactionRequest;XSDElementDeclaration=9$MRMessage" name="TransactionRequest"/>
+    <message href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/TransactionResponse;XSDElementDeclaration=10$MRMessage" name="TransactionResponse"/>
+    <message href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Fault;XSDElementDeclaration=11$MRMessage" name="Fault"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Transaction_number;XSDElementDeclaration" name="Transaction_number" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Transaction_date;XSDElementDeclaration=1" name="Transaction_date" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Store_number;XSDElementDeclaration=2" name="Store_number" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Quantity;XSDElementDeclaration=3" name="Quantity" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Total_amount;XSDElementDeclaration=4" name="Total_amount" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Delivery_address;XSDElementDeclaration=5" name="Delivery_address" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Transaction_status;XSDElementDeclaration=6" name="Transaction_status" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Fcode;XSDElementDeclaration=7" name="Fcode" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Fstring;XSDElementDeclaration=8" name="Fstring" type="mset://TransctionDetails#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/TransactionRequest;XSDElementDeclaration=9" name="TransactionRequest" type="mset://TransctionDetails#/-/complexType{}TransactionRequest"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/TransactionResponse;XSDElementDeclaration=10" name="TransactionResponse" type="mset://TransctionDetails#/-/complexType{}TransactionResponse"/>
+    <element href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Fault;XSDElementDeclaration=11" name="Fault" type="mset://TransctionDetails#/-/complexType{}Fault"/>
+    <complexType baseType="mset://TransctionDetails#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/TransactionRequest;XSDComplexTypeDefinition" name="TransactionRequest"/>
+    <complexType baseType="mset://TransctionDetails#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/TransactionResponse;XSDComplexTypeDefinition=1" name="TransactionResponse"/>
+    <complexType baseType="mset://TransctionDetails#/-/complexType{http://www.w3.org/2001/XMLSchema}anyType" href="platform:/resource/TransctionDetails/TransctionDetails/TransactionDetails.mxsd#/0/Fault;XSDComplexTypeDefinition=2" name="Fault"/>
+  </MRMsgCollection>
+</MRMessageSet>

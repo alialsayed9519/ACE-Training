@@ -1,0 +1,15 @@
+
+
+Importing file: C:\Users\zedan\IBM\ACET12\workspace\TransctionDetails\TransctionDetailsService.wsdl
+
+The WSDL import will proceed with bindings TransctionDetailsSOAP_HTTP_Binding.
+Creating wsdl schema document for file:///C:/Users/zedan/IBM/ACET12/workspace/TransctionDetails/TransctionDetailsService.wsdl.
+Parsing wsdl binding {http://tempuri.org/TransctionDetails}TransctionDetailsSOAP_HTTP_Binding.
+Parsing wsdl binding input Transaction.
+Parsing wsdl binding output Transaction.
+Parsing wsdl binding fault Transaction_Fault.
+Processing doc style for operation Transaction.
+Populating WSDL schema TransctionDetailsService.xsd.
+Creating file TransctionDetailsService.xsd in the workspace.
+Creating file TransctionDetailsService_InlineSchema1.xsd in the workspace.
+Copying source WSDL TransctionDetailsService.wsdl to TransctionDetailsService.wsdl.

@@ -1,0 +1,15 @@
+BROKER SCHEMA SoapService.Transaction.msgflow
+DECLARE soapenv NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+DECLARE 
+CREATE COMPUTE MODULE SoapService_Transaction_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+	
+	
+	
+	
+		RETURN TRUE;
+	END;
+
+END MODULE;

@@ -1,0 +1,8 @@
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.order_details;
+		SET outRef.XMLNSC.totalSum = CAST(inRef.unit_price AS INTEGER) * CAST(inRef.quantity AS INTEGER);	
+		RETURN TRUE;
+	END;
+END MODULE;

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+  <xsd:element name="Rollno" type="xsd:string"/>
+    
+  <xsd:element name="Department" type="xsd:string"/>
+    
+  <xsd:element name="StudentDetials">
+            
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/StudentDetials;XSDElementDeclaration=2$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+            
+    <xsd:complexType>
+            
+      <xsd:sequence>
+                
+        <xsd:element ref="Student"/>
+              
+      </xsd:sequence>
+          
+    </xsd:complexType>
+      
+  </xsd:element>
+    
+  <xsd:element name="Student">
+            
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/Student;XSDElementDeclaration=3$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+            
+    <xsd:complexType>
+            
+      <xsd:sequence>
+                
+        <xsd:element ref="Name"/>
+                
+        <xsd:element ref="Rollno"/>
+                
+        <xsd:element ref="Department"/>
+              
+      </xsd:sequence>
+          
+    </xsd:complexType>
+      
+  </xsd:element>
+    
+  <xsd:element name="Name" type="xsd:string"/>
+  
+</xsd:schema>

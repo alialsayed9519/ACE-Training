@@ -1,0 +1,9 @@
+BROKER SCHEMA IIBAppTest.Exciption.Handler.subflow
+
+
+CREATE COMPUTE MODULE IIBAppTest_Exciption_Handler_subflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		Set OutputExceptionList.
+	END;
+END MODULE;

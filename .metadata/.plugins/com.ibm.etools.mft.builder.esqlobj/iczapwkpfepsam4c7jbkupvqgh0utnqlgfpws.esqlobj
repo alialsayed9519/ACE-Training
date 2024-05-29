@@ -1,0 +1,10 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.StudentDetials.Student;
+		DECLARE outRef REFERENCE TO OutputRoot.XMLNSC.StudentDetials_out.Student_out;
+		SET outRef.Name_out = inRef.Name;
+		SET outRef.Rollno_out = inRef.Rollno;
+		SET outRef.Department_out = inRef.Department;
+			
+		RETURN TRUE;
+	END;

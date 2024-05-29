@@ -1,0 +1,9 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		DECLARE inRef REFERENCE TO InputRoot.DFDL.CustomerDetails;
+
+		
+		SET OutputRoot.XMLNSC = InputRoot.DFDL;		
+		RETURN TRUE;
+	END;

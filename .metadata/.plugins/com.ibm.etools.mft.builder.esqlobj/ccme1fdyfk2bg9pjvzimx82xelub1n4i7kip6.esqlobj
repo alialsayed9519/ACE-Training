@@ -1,0 +1,12 @@
+CREATE COMPUTE MODULE CustomerApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE inRef REFERENCE TO InputRoot.DFDL.CustomerDetails;
+		FOR inRef AS InputRoot.DFDL.CustomerDetails.Customer[] DO
+		END FOR
+		
+	---	SET OutputRoot.XMLNSC = InputRoot.DFDL;	
+	RETURN TRUE;
+	END;
+END MODULE;

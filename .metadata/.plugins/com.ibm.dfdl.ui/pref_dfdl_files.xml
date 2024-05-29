@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+<preferenceForDFDLFile dfdlFileLocation="/CustomerApp/DFDL_Customer_Model.xsd" didLastParseUseOutputFromUnparser="false" lastFileUsedForParse="D:\message\dfdl" messageRootUsedForLastParse="CustomerDetails"/>
+<preferenceForDFDLFile dfdlFileLocation="/DFDL_Modeling/DFDL_Modeling.xsd" didLastParseUseOutputFromUnparser="false" didLastUnparseUseLogicalInstance="true" lastFileUsedForParse="D:\message\dfdl" messageRootUsedForLastParse="Student_Details" messageRootUsedForLastUnparse="Student_Details"/>
+</preferences>

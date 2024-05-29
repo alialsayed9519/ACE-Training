@@ -1,0 +1,7 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		
+		set OutputRoot.XMLNSC.TableRecord.Article[] = select * from Database.Article;
+		
+		RETURN TRUE;
+	END;

@@ -1,0 +1,9 @@
+CREATE COMPUTE MODULE TimeoutNotification_TimeoutControl_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		set OutputRoot.XMLNSC.TableRecord.Article[] = select * from Database.Article;
+		
+		RETURN TRUE;
+	END;
+END MODULE;

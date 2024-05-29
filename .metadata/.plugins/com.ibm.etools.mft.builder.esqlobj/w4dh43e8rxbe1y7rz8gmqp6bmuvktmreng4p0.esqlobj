@@ -1,0 +1,8 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.articaleDetails;
+		DECLARE outRef REFERENCE TO OutputRoot;
+		CREATE LASTCHILD OF OutputRoot.XMLNSC AS outRef NAME 'DataDetails';
+		SET outRef.Product[] = SELECT * FROM  inRef.Articale[];
+		RETURN TRUE;
+	END;

@@ -1,0 +1,15 @@
+BROKER SCHEMA IIB.Database.msgflow
+
+
+CREATE DATABASE MODULE IIB_Database_msgflow_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inRef REFERENCE TO Root.XMLNSC.articaleDetails.Articale;
+		FOR inRef AS Root.XMLNSC.articaleDetails.Articale[] DO
+			INSERT INTO Database.article  VALUES (inRef.Name, inRef.Quant, inRef.Price );
+		END FOR;
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

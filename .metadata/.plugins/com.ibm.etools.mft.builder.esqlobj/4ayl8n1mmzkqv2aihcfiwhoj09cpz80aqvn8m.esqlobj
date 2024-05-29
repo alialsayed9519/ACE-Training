@@ -1,0 +1,7 @@
+CREATE COMPUTE MODULE IIBasConsumer_Trans_msgflow_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot = InputRoot;
+		RETURN TRUE;
+	END;
+END MODULE;

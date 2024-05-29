@@ -1,0 +1,10 @@
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		set OutputRoot = InputRoot;
+		RETURN TRUE;
+	END;
+
+END MODULE;

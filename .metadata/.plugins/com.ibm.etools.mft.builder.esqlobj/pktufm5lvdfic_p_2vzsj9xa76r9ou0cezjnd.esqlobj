@@ -1,0 +1,6 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+	
+		SET OutputRoot.XMLNSC.CustomerDetails.Customer[] = SELECT * FROM Database.customer;
+		RETURN TRUE;
+	END;

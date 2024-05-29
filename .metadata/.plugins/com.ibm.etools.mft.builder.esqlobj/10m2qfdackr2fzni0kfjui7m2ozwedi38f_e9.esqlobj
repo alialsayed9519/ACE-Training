@@ -1,0 +1,19 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.StudentDetials;
+		CREATE FIELD OutputRoot.XMLNSC.StudentDetials_out;
+		DECLARE outRef REFERENCE TO OutputRoot.XMLNSC.StudentDetials_out.Student_out;
+		DECLARE numOfStudents INTEGER CARDINALITY(InputRoot.XMLNSC.StudentDetials.Student[]);
+		DECLARE iterator INTEGER 1;
+		
+		X : LOOP
+			SET outRef.Student_out[iterator].Name_out = inRef.Student[iterator].Name;
+			SET outRef.Student_out[iterator].Rollno_out = inRef.Student[iterator].Rollno;
+			SET outRef.Student_out[iterator].Department_out = inRef.Student[iterator].Department;
+			IF iterator = numOfStudents THEN
+				LEAVE X;
+			END IF;
+			SET iterator = iterator + 1;
+		END LOOP;			
+		RETURN TRUE;
+	END;

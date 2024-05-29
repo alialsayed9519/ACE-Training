@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns="http://tempuri.org/TransctionDetails" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/TransctionDetails" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TransctionDetails" targetNamespace="http://tempuri.org/TransctionDetails">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="TransctionDetailsService_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="TransctionDetailsSOAP_HTTP_Binding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+    
+  <wsdl:types>
+        
+          
+    <xsd:schema xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:mrm="http://tempuri.org/TransctionDetails" targetNamespace="http://tempuri.org/TransctionDetails">
+      
+      <xsd:include schemaLocation="TransctionDetailsService_InlineSchema1.xsd"/>
+    </xsd:schema>
+        
+  </wsdl:types>
+    
+  <wsdl:message name="Transaction_in">
+        
+    <wsdl:part element="TransactionRequest" name="TransactionRequest"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="Transaction_out">
+        
+    <wsdl:part element="TransactionResponse" name="TransactionResponse"/>
+      
+  </wsdl:message>
+    
+  <wsdl:message name="Transaction_fault1">
+        
+    <wsdl:part element="Fault" name="Fault"/>
+      
+  </wsdl:message>
+    
+  <wsdl:portType name="TransctionDetailsPortType">
+        
+    <wsdl:operation name="Transaction">
+            
+      <wsdl:input message="Transaction_in" name="Transaction_Input"/>
+            
+      <wsdl:output message="Transaction_out" name="Transaction_Output"/>
+            
+      <wsdl:fault message="Transaction_fault1" name="Transaction_Fault"/>
+          
+    </wsdl:operation>
+      
+  </wsdl:portType>
+    
+  <wsdl:binding name="TransctionDetailsSOAP_HTTP_Binding" type="TransctionDetailsPortType">
+        
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        
+    <wsdl:operation name="Transaction">
+            
+      <soap:operation soapAction=""/>
+            
+      <wsdl:input name="Transaction_Input">
+                
+        <soap:body parts="TransactionRequest" use="literal"/>
+              
+      </wsdl:input>
+            
+      <wsdl:output name="Transaction_Output">
+                
+        <soap:body parts="TransactionResponse" use="literal"/>
+              
+      </wsdl:output>
+            
+      <wsdl:fault name="Transaction_Fault">
+                
+        <soap:fault name="Transaction_Fault" use="literal"/>
+              
+      </wsdl:fault>
+          
+    </wsdl:operation>
+      
+  </wsdl:binding>
+    
+  <wsdl:service name="TransctionDetailsSOAP_Service">
+        
+    <wsdl:port binding="TransctionDetailsSOAP_HTTP_Binding" name="TransctionDetailsSOAP_Port">
+            
+      <soap:address location="http://localhost:7800/TransctionDetailsSOAP_HTTP_Service"/>
+          
+    </wsdl:port>
+      
+  </wsdl:service>
+  
+</wsdl:definitions>

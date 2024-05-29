@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MessageBroker name="DFDL_Modeling">
+  <XSDCollection href="platform:/resource/DFDL_Modeling/IBMdefined/CommaSeparatedFormat.xsd" prefix="tns" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+  <XSDCollection href="platform:/resource/DFDL_Modeling/DFDL_Modeling.xsd" prefix="" targetNamespace="">
+    <import name="IBMdefined/CommaSeparatedFormat.xsd" targetNamespace="http://www.ibm.com/dfdl/CommaSeparatedFormat"/>
+    <element href="platform:/resource/DFDL_Modeling/DFDL_Modeling.xsd#//Student_Details;XSDElementDeclaration" name="Student_Details"/>
+  </XSDCollection>
+</MessageBroker>

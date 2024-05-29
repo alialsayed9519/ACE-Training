@@ -1,0 +1,12 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.ProductDetails.Product;
+		DECLARE outRef REFERENCE TO OutputRoot;
+		CREATE LASTCHILD OF OutputRoot.XMLNSC.ProductDetails AS outRef NAME 'Product';
+		SET outRef.Quant = FIELDVALUE(inRef.Quant);
+		SET outRef.Quant_Unit = FIELDVALUE(inRef.Quant.Unit);
+		SET outRef.Price = FIELDVALUE(inRef.Price);
+		SET outRef.Price_Unit = FIELDVALUE(inRef.Price.Unit);
+		SET outRef.Sender = FIELDVALUE(inRef.Sender);
+		RETURN TRUE;
+	END;

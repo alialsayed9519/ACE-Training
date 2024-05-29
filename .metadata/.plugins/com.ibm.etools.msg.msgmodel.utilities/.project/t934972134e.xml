@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MRMessageSet id="HPIEOC0002001" name="IIBDevApp_msgset" parser="XMLNSC">
+    
+  <MRMsgCollection href="platform:/resource/IIBDevApp_msgset/IIBDevApp_msgset/root_in.mxsd" prefix="" targetNamespace="">
+        
+    <message href="platform:/resource/IIBDevApp_msgset/IIBDevApp_msgset/root_in.mxsd#/0/StudentDetials;XSDElementDeclaration=2$MRMessage" name="StudentDetials"/>
+        
+    <message href="platform:/resource/IIBDevApp_msgset/IIBDevApp_msgset/root_in.mxsd#/0/Student;XSDElementDeclaration=3$MRMessage" name="Student"/>
+        
+    <element href="platform:/resource/IIBDevApp_msgset/IIBDevApp_msgset/root_in.mxsd#/0/Rollno;XSDElementDeclaration" name="Rollno" type="mset://IIBDevApp_msgset#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+        
+    <element href="platform:/resource/IIBDevApp_msgset/IIBDevApp_msgset/root_in.mxsd#/0/Department;XSDElementDeclaration=1" name="Department" type="mset://IIBDevApp_msgset#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+        
+    <element href="platform:/resource/IIBDevApp_msgset/IIBDevApp_msgset/root_in.mxsd#/0/StudentDetials;XSDElementDeclaration=2" name="StudentDetials"/>
+        
+    <element href="platform:/resource/IIBDevApp_msgset/IIBDevApp_msgset/root_in.mxsd#/0/Student;XSDElementDeclaration=3" name="Student"/>
+        
+    <element href="platform:/resource/IIBDevApp_msgset/IIBDevApp_msgset/root_in.mxsd#/0/Name;XSDElementDeclaration=4" name="Name" type="mset://IIBDevApp_msgset#/-/simpleType{http://www.w3.org/2001/XMLSchema}string"/>
+      
+  </MRMsgCollection>
+  
+</MRMessageSet>

@@ -1,0 +1,11 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+
+	DECLARE inRef REFERENCE TO InputRoot.XMLNSC.[<];
+	
+	IF CONTAINS(inRef, 'Sphere') THEN
+		prop
+	END IF;
+	
+	END;
+	RETURN FALSE;

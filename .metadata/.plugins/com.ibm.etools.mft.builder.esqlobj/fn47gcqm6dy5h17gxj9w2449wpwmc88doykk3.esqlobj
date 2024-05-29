@@ -1,0 +1,18 @@
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.Message;
+		
+		IF inRef.Tutor = 'Ali Alsayed' AND inRef.Platform = 'Youtube' THEN
+			SET OutputRoot.Details.Youtube = 'learn and pass';
+			PROPAGATE TO TERMINAL 0;
+		ELSEIF inRef.Tutor = 'Ahmed Alsayed' AND inRef.Platform = 'Udemy' THEN
+			SET OutputRoot.XMLNSC = InputRoot.XMLNSC;
+			PROPAGATE TO TERMINAL 1;
+		END IF;
+		
+		RETURN FALSE;
+	END;
+
+END MODULE;

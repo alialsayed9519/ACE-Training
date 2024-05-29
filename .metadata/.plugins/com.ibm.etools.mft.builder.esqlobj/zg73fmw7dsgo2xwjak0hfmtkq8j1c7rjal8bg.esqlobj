@@ -1,0 +1,11 @@
+CREATE DATABASE MODULE Excption_Storage_msgflow_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		DECLARE inRef REFERENCE TO Root.JSON.Data.execption;
+		INSERT INTO  Database.execption VALUES (inRef.appName, inRef.name, inRef.time);
+		
+		RETURN FALSE;
+	END;
+
+END MODULE;

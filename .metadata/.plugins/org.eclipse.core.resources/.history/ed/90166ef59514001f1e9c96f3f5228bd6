@@ -1,0 +1,15 @@
+ 
+
+
+
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.articaleDetails;
+		FOR inRef AS InputRoot.XMLNSC.articaleDetails.Articale[] DO
+			INSERT INTO Database.article VALUES (inRef.Name, inRef.Quant, inRef.Price);
+		END FOR;
+		
+		DELETE FROM Database.article AS T WHERE T.price = 14;
+	END;
+END MODULE;

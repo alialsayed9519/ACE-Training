@@ -1,0 +1,7 @@
+CREATE COMPUTE MODULE IIBAppTest_Exciption_Handler_subflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+			SET OutputRoot.XMLNSC.Exception = InputExceptionList;
+		RETURN TRUE;
+	END;
+END MODULE;

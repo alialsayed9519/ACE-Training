@@ -1,0 +1,16 @@
+BROKER SCHEMA SoapService.Transaction.msgflow
+DECLARE soapenv NAMESPACE 'http://schemas.xmlsoap.org/soap/envelope/';
+DECLARE tran NAMESPACE 'http://tempuri.org/TransctionDetails';
+
+CREATE COMPUTE MODULE SoapService_Transaction_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+		DECLARE inRef REFERENCE TO InputRoot.SOAP.Body.TransactionRequest
+		INSERT INTO Database.transaction_details VALUES (
+	
+	
+		RETURN TRUE;
+	END;
+
+END MODULE;

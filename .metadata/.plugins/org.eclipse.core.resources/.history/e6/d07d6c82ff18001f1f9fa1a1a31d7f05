@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="TransactionRequest">
+    <xsd:sequence>
+      <xsd:element ref="Transaction_number"/>
+      <xsd:element ref="Transaction_date"/>
+      <xsd:element ref="Store_number"/>
+      <xsd:element ref="Total_amount"/>
+      <xsd:element ref="Quantity"/>
+      <xsd:element ref="Delivery_address"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TransactionResponse">
+    <xsd:sequence>
+      <xsd:element ref="Transaction_date"/>
+      <xsd:element ref="Fstring"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Fault">
+    <xsd:sequence>
+      <xsd:element ref="Fcode"/>
+      <xsd:element ref="Quantity"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="Transaction_number" type="xsd:string"/>
+  <xsd:element name="Transaction_date" type="xsd:string"/>
+  <xsd:element name="Store_number" type="xsd:string"/>
+  <xsd:element name="Quantity" type="xsd:string"/>
+  <xsd:element name="Total_amount" type="xsd:string"/>
+  <xsd:element name="Delivery_address" type="xsd:string"/>
+  <xsd:element name="Transaction_status" type="xsd:string"/>
+  <xsd:element name="Fcode" type="xsd:string"/>
+  <xsd:element name="Fstring" type="xsd:string"/>
+  <xsd:element name="TransactionRequest" type="TransactionRequest">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/TransactionRequest;XSDElementDeclaration=9$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TransactionResponse" type="TransactionResponse">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/TransactionResponse;XSDElementDeclaration=10$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Fault" type="Fault">
+    <xsd:annotation>
+      <xsd:appinfo source="WMQI_APPINFO">
+        <MRMessage messageDefinition="/0/Fault;XSDElementDeclaration=11$MRObject"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+</xsd:schema>

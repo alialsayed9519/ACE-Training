@@ -1,0 +1,8 @@
+CREATE COMPUTE MODULE CustomerApp_msgflow_Compute2
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+		SET OutputRoot.XMLNSC.CustomerDetails.Customer[] = SELECT * FROM Database.customer;
+		RETURN TRUE;
+	END;
+END MODULE;

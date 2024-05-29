@@ -1,0 +1,13 @@
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.StudentDetials.Student;
+		CREATE FIELD OutputRoot.XMLNSC.StudentDetials_out.Student_out;
+		DECLARE outRef REFERENCE TO OutputRoot.XMLNSC.StudentDetials_out.Student_out;
+		SET outRef.Name_out = inRef.Name;
+		SET outRef.Rollno_out = inRef.Rollno;
+		SET outRef.Department_out = inRef.Department;
+			
+		RETURN TRUE;
+	END;
+END MODULE;

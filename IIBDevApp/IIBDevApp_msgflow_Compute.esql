@@ -1,0 +1,17 @@
+ 
+
+
+
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL countArticleTable();
+		RETURN TRUE;
+	END;
+	
+	CREATE PROCEDURE countArticleTable( )  
+	BEGIN
+		SET OutputRoot.XMLNSC.Article.count = SELECT COUNT(*) FROM Database.article;
+	END;
+	
+END MODULE;

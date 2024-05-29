@@ -1,0 +1,20 @@
+ 
+
+
+
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.Sphere;
+		DECLARE radius INTEGER inRef.Radius;
+		DECLARE volume DECIMAL;
+		SET volume = volumeOfSphere(radius); 
+		RETURN TRUE;
+	END;
+	
+	CREATE FUNCTION volumeOfSphere(IN r INTEGER ) RETURNS DECIMAL
+	BEGIN
+		RETURN 1.33*3.14*r*r*r;
+	END;
+	
+END MODULE;

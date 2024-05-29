@@ -1,0 +1,10 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+	CALL countArticleTable();
+		RETURN TRUE;
+	END;
+	
+	CREATE PROCEDURE countArticleTable( )  
+	BEGIN
+		SET OutputRoot.XMLNSC.Article.count = SELECT COUNT(*) FROM Database.article;
+	END;

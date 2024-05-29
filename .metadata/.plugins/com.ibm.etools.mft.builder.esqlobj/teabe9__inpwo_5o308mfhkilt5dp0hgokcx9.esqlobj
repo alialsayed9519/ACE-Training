@@ -1,0 +1,2 @@
+CREATE COMPUTE MODULE SoapService_Transaction_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN

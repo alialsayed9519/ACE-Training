@@ -1,0 +1,9 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.DFDL.CustomerDetails;
+		FOR inRef AS InputRoot.DFDL.CustomerDetails.Customer[] DO
+			INSERT INTO Database.customer VALUES (inRef.first_name, inRef.second_name, inRef.third_name, inRef.last_name, inRef.nationa_lD, inRef.mobile_number);
+		END FOR;
+		
+		RETURN TRUE;
+	END;

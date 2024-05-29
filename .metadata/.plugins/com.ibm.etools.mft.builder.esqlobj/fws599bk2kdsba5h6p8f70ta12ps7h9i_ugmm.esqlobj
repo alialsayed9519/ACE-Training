@@ -1,0 +1,10 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.ProductDetails;
+		DECLARE outRef REFERENCE TO OutputRoot;
+		CREATE LASTCHILD OF OutputRoot.XMLNSC.ProductDetails AS outRef NAME 'Product';
+		SET outRef.Quant = inRef.Quant;
+		SET outRef.Price = inRef.Price;
+		SET outRef.Sender = inRef.Sender;
+		RETURN TRUE;
+	END;

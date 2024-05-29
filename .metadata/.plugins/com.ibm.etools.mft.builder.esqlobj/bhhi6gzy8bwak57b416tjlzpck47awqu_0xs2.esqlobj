@@ -1,0 +1,10 @@
+CREATE COMPUTE MODULE IIBDevApp_msgflow_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.articaleDetails;
+		DECLARE outRef REFERENCE TO OutputRoot;
+		CREATE LASTCHILD OF OutputRoot.XMLNSC AS outRef NAME 'DataDetails';
+		SET outRef.Product[] = SELECT * FROM  inRef.Artical[];
+		RETURN TRUE;
+	END;
+END MODULE;

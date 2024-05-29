@@ -1,0 +1,9 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.Transaction.Data;
+		CREATE FIELD OutputRoot.SOAP.Body.tran:TransactionResponse;
+		DECLARE outRef REFERENCE TO OutputRoot.SOAP.Body.tran:TransactionRequest;
+		
+		
+		RETURN TRUE;
+	END;

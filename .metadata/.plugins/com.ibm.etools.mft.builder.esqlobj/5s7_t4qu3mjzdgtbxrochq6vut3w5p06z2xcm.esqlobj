@@ -1,0 +1,6 @@
+/*EATE FUNCTION Main() RETURNS BOOLE*/
+	BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.XMLNSC.orderDetails;
+		SET outRef.XMLNSC.totalSum = CAST(inRef.unitPrice AS INTEGER) * CAST(inRef.quantity AS INTEGER);	
+		RETURN TRUE;
+	END;
